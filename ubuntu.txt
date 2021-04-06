@@ -1,0 +1,2 @@
+#below command is used to check the service is running status
+lsof -i :4200
