@@ -4,5 +4,5 @@ lsof -i :4200
 #to create jar file for gradle project
 ./gradlew clean build -PspringActiveProfiles={profilename} -DspringActiveProfiles={profilename} -Pidentity.type={type} -x test
 
-#command to copy/move all the files except one directory/file
+#command to copy/move all the files except one directory/file (Note : you should be in the location where the files you want to move/copy)
 sudo cp -r !(old_working) /home/sure/test/
