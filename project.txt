@@ -1,0 +1,5 @@
+#angular build command
+"build-web-with-deployment-url": "npm run build-dependencies && npm run build-libraries && node --max_old_space_size=8192 node_modules/@angular/cli/bin/ng build --configuration=${DEPLOY_ENV:-staging} --base-href /${DEPLOY_PATH:-smrh}/ --deploy-url /${DEPLOY_PATH:-smrh}/ --outputPath=./public",
+
+"build-web-with-deployment-url": "npm run build-dependencies && npm run build-libraries && node --max_old_space_size=8192 node_modules/@angular/cli/bin/ng build --configuration=${DEPLOY_ENV} --base-href ${BASE_HREF} --deploy-url ${MODULE_PATH} --outputPath=./public",
+
