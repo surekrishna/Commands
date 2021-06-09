@@ -3,3 +3,21 @@
 
 "build-web-with-deployment-url": "npm run build-dependencies && npm run build-libraries && node --max_old_space_size=8192 node_modules/@angular/cli/bin/ng build --configuration=${DEPLOY_ENV} --base-href ${BASE_HREF} --deploy-url ${MODULE_PATH} --outputPath=./public",
 
+"build-web-with-deployment-url": "npm run build-dependencies && npm run build-libraries && node --max_old_space_size=8192 node_modules/@angular/cli/bin/ng build --configuration=${DEPLOY_ENV} --base-href ${BASE_HREF} --deploy-url ${MODULE_PATH} --outputPath=./public/${MODULE_PATH} && gulp deployment --modulePath ${MODULE_PATH}",
+
+To install specific version of node
+----------------------------------
+sudo nvm install 14.17.0
+sudo npm install -g npm@latest
+
+
+Command 'nvm' not found, did you mean:
+--------------------------------------
+[[ -s $HOME/.nvm/nvm.sh ]] && . $HOME/.nvm/nvm.sh  # This loads NVM
+ls -a | grep .nvm
+git clone http://github.com/creationix/nvm.git .nvm
+sudo apt-get update
+source ~/.nvm/nvm.sh
+
+
+
