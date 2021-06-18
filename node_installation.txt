@@ -1,0 +1,47 @@
+to install node particular version
+----------------------------------
+sudo nvm install 14.17.0
+sudo npm install -g npm@latest
+
+
+Command 'nvm' not found, did you mean:
+--------------------------------------
+[[ -s $HOME/.nvm/nvm.sh ]] && . $HOME/.nvm/nvm.sh  # This loads NVM
+ls -a | grep .nvm
+git clone http://github.com/creationix/nvm.git .nvm
+sudo apt-get update
+source ~/.nvm/nvm.sh
+
+
+sudo rm -rf .nvm
+nvm deactivate
+sudo apt-get purge nodejs -y
+sudo apt-get purge --auto-remove nodejs -y
+
+
+sudo apt install nodejs
+sudo npm install -g npm@latest
+sudo apt-get update
+sudo apt-get upgrade -y
+sudo apt-get install software-properties-common
+
+
+curl -sL https://deb.nodesource.com/setup_14.x | sudo bash -
+sudo apt-get install -y nodejs
+
+nvm use 14.17.0
+
+apt-cache policy node nodejs | grep Installed
+
+nvm alias default v14.17.0
+
+nvm ls
+
+nvm uninstall v10.16.3
+
+
+
+
+
+
+
